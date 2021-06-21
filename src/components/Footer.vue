@@ -1,53 +1,53 @@
 <template>
   <footer>
-    <nav>
-      <div>
-        <h4>Support</h4>
-        <Links
-          v-for="(supportLink, index) in supportLinks"
-          :key="index"
-          :singleLink="supportLink"
-        />
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <Links
-          v-for="(exploreLink, index) in exploreLinks"
-          :key="index"
-          :singleLink="exploreLink"
-        />
-      </div>
-      <div>
-        <h4>Visit</h4>
-        <Links
-          v-for="(visitLink, index) in visitLinks"
-          :key="index"
-          :singleLink="visitLink"
-        />
-      </div>
-    </nav>
+    <div class="container">
+      <FooterTop
+        :supportLinks="supportLinks"
+        :exploreLinks="exploreLinks"
+        :visitLinks="visitLinks"
+        :contacts="contacts"
+      />
+    </div>
   </footer>
 </template>
 
 <script>
-import Links from "./Links";
+import FooterTop from "./FooterTop";
+
 
 export default {
   name: "Footer",
   components: {
-    Links
+    FooterTop,
   },
   props: {
     supportLinks: Array,
     exploreLinks: Array,
-    visitLinks: Array
+    visitLinks: Array,
+    contacts: Array,
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 footer {
-  background-color: yellow;
-  height: auto;
+  background-color: #192735;
+  .footer__top {
+    padding: 50px 0;
+    .footer__nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      color: #fff;
+
+      li {
+        margin-top: 10px;
+        a {
+          color: #8fa1b5;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 </style>

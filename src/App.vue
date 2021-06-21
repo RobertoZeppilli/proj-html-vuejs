@@ -2,7 +2,12 @@
   <div id="app">
     <Header :navLinks="Links" />
     <Main />
-    <Footer :supportLinks="Supports" :exploreLinks="Explores" :visitLinks="Visits"/>
+    <Footer
+      :supportLinks="Supports"
+      :exploreLinks="Explores"
+      :visitLinks="Visits"
+      :contacts="Contacts"
+    />
   </div>
 </template>
 
@@ -16,7 +21,7 @@ export default {
   components: {
     Header,
     Main,
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -44,86 +49,130 @@ export default {
       ],
       Supports: [
         {
-          name: 'Privacy',
-          url: '#privacy'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Privacy",
+          url: "#privacy",
         },
         {
-          name: 'Terms',
-          url: '#terms'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Terms",
+          url: "#terms",
         },
         {
-          name: 'Cookie Policy',
-          url: '#cookie-policy'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Cookie Policy",
+          url: "#cookie-policy",
         },
         {
-          name: 'Sitemap',
-          url: '#sitemap'
-        }
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Sitemap",
+          url: "#sitemap",
+        },
       ],
       Explores: [
         {
-          name: 'Accomodation',
-          url: '#accomodation'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Accomodation",
+          url: "#accomodation",
         },
         {
-          name: 'Arts Academics',
-          url: '#arts-academics'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Arts Academics",
+          url: "#arts-academics",
         },
         {
-          name: 'Central Services',
-          url: '#central-services'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Central Services",
+          url: "#central-services",
         },
         {
-          name: 'Conferences and Events',
-          url: '#conferences'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Conferences and Events",
+          url: "#conferences",
         },
         {
-          name: 'Food and Drink',
-          url: '#food-and-drink'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Food and Drink",
+          url: "#food-and-drink",
         },
       ],
       Visits: [
         {
-          name: 'Admission',
-          url: '#admission'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Admission",
+          url: "#admission",
         },
         {
-          name: 'Contact Us',
-          url: '#contact-us'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Contact Us",
+          url: "#contact-us",
         },
         {
-          name: 'FAQs',
-          url: '#faqs'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "FAQs",
+          url: "#faqs",
         },
         {
-          name: 'Request Information',
-          url: '#request-information'
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Request Information",
+          url: "#request-information",
         },
         {
-          name: 'Privacy Notice',
-          url: '#privacy-notice'
-        }
+          icon: true,
+          family: "fas",
+          type: "fa-chevron-right",
+          name: "Privacy Notice",
+          url: "#privacy-notice",
+        },
       ],
       Contacts: [
         {
-          icon: '<i class="fas fa-map-marker-alt"></i>',
-          text: '900, Wood Street, MI New York 48607'
+          family: "fas",
+          type: "fa-map-marker-alt",
+          text: "900, Wood Street, MI New York 48607",
         },
         {
-          icon: '<i class="fas fa-phone-square-alt"></i>',
-          text: '+ 56 345 678 000-09'
+          family: "fas",
+          type: "fa-phone-square-alt",
+          text: "+ 56 345 678 000-09",
         },
         {
-          icon: '<i class="fas fa-envelope"></i>',
-          text: 'info@example.com'
-        }
-      ]
+          family: "fas",
+          type: "fa-envelope",
+          text: "info@example.com",
+        },
+      ],
     };
   },
 };
 </script>
 
 <style lang="scss">
-@import './scss/general';
-
+@import "./scss/general";
 </style>
