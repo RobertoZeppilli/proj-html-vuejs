@@ -1,24 +1,24 @@
 <template>
   <footer>
-    <div class="container">
-      <FooterTop
-        :supportLinks="supportLinks"
-        :exploreLinks="exploreLinks"
-        :visitLinks="visitLinks"
-        :contacts="contacts"
-      />
-    </div>
+    <FooterTop
+      :supportLinks="supportLinks"
+      :exploreLinks="exploreLinks"
+      :visitLinks="visitLinks"
+      :contacts="contacts"
+    />
+    <FooterBottom :supportLinks="supportLinks" />
   </footer>
 </template>
 
 <script>
 import FooterTop from "./FooterTop";
-
+import FooterBottom from "./FooterBottom";
 
 export default {
   name: "Footer",
   components: {
     FooterTop,
+    FooterBottom,
   },
   props: {
     supportLinks: Array,
@@ -33,15 +33,14 @@ export default {
 footer {
   background-color: #192735;
   .footer__top {
-    padding: 50px 0;
+    padding: 70px 0;
     .footer__nav {
       display: flex;
       justify-content: space-between;
-      margin-top: 30px;
       color: #fff;
 
       li {
-        margin-top: 10px;
+        // margin-top: 20px;
         a {
           color: #8fa1b5;
           text-decoration: none;

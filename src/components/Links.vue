@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li>
-      <a :href="singleLink.url"><i v-if="singleLink.icon == true" :class="`${singleLink.family} ${singleLink.type}`"></i> {{ singleLink.name }}</a>
+      <a :href="singleLink.url"><i v-if="singleLink.icon || singleLink.footerBottom == false" :class="`${singleLink.family} ${singleLink.type}`"></i> {{ singleLink.name }}</a>
     </li>
   </ul>
 </template>

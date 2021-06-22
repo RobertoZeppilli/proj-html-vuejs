@@ -28,23 +28,23 @@ export default {
       Links: [
         {
           name: "Home",
-          url: "#home",
+          url: "#home"
         },
         {
           name: "About",
-          url: "#about",
+          url: "#about"
         },
         {
           name: "Academics",
-          url: "#academics",
+          url: "#academics"
         },
         {
           name: "Courses",
-          url: "#courses",
+          url: "#courses"
         },
         {
           name: "News",
-          url: "#news",
+          url: "#news"
         },
       ],
       Supports: [
@@ -53,28 +53,28 @@ export default {
           family: "fas",
           type: "fa-chevron-right",
           name: "Privacy",
-          url: "#privacy",
+          url: "#privacy"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Terms",
-          url: "#terms",
+          url: "#terms"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Cookie Policy",
-          url: "#cookie-policy",
+          url: "#cookie-policy"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Sitemap",
-          url: "#sitemap",
+          url: "#sitemap"
         },
       ],
       Explores: [
@@ -83,35 +83,35 @@ export default {
           family: "fas",
           type: "fa-chevron-right",
           name: "Accomodation",
-          url: "#accomodation",
+          url: "#accomodation"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Arts Academics",
-          url: "#arts-academics",
+          url: "#arts-academics"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Central Services",
-          url: "#central-services",
+          url: "#central-services"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Conferences and Events",
-          url: "#conferences",
+          url: "#conferences"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Food and Drink",
-          url: "#food-and-drink",
+          url: "#food-and-drink"
         },
       ],
       Visits: [
@@ -120,52 +120,52 @@ export default {
           family: "fas",
           type: "fa-chevron-right",
           name: "Admission",
-          url: "#admission",
+          url: "#admission"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Contact Us",
-          url: "#contact-us",
+          url: "#contact-us"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "FAQs",
-          url: "#faqs",
+          url: "#faqs"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Request Information",
-          url: "#request-information",
+          url: "#request-information"
         },
         {
           icon: true,
           family: "fas",
           type: "fa-chevron-right",
           name: "Privacy Notice",
-          url: "#privacy-notice",
+          url: "#privacy-notice"
         },
       ],
       Contacts: [
         {
           family: "fas",
           type: "fa-map-marker-alt",
-          text: "900, Wood Street, MI New York 48607",
+          text: "900 Wood Street, MI New York 48607"
         },
         {
           family: "fas",
           type: "fa-phone-square-alt",
-          text: "+ 56 345 678 000-09",
+          text: "+ 56 345 678 000-09"
         },
         {
           family: "fas",
           type: "fa-envelope",
-          text: "info@example.com",
+          text: "info@example.com"
         },
       ],
     };

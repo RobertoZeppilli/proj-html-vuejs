@@ -18,5 +18,9 @@ export default {
     .contact {
         color: #8fa1b5;
         margin: 10px 0;
+
+        i {
+          margin-right: 5px;
+        }
     }
 </style>
