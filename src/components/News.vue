@@ -70,8 +70,13 @@ export default {
       box-shadow: $mainBoxesShadow;
       .notice__img {
         height: 250px;
+        overflow: hidden;
         img {
           @include imagePosition ($type: 'cover top');
+          transition: transform .5s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
       .notice__info {
