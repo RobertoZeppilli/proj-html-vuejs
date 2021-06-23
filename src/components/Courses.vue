@@ -19,7 +19,7 @@
           src="../assets/img/video-bg-3.jpg"
           alt="Video Frame"
         />
-        <img class="play" src="../assets/img/play-button.png" alt="" />
+        <img class="play" src="../assets/img/play-button.png" alt="Play Button" />
       </div>
       <div class="event__two">
         <div class="flag">
@@ -96,12 +96,13 @@ export default {
     margin-top: 50px;
     .event__one,
     .event__two {
-      width: calc(100% / 2);
+      width: 50%;
       box-shadow: $mainBoxesShadow;
     }
     .event__one {
       position: relative;
       .video {
+        width: 100%;
         height: 100%;
         object-fit: cover;
       }
@@ -118,7 +119,6 @@ export default {
       position: absolute;
       top: 15%;
       left: 35%;
-      width: 55%;
       padding: 0 50px 60px 50px;
       background-color: $white;
       .flag {

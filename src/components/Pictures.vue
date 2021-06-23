@@ -2,7 +2,7 @@
   <section id="pictures">
     <div class="pictures">
       <div class="picture" v-for="(picture, index) in pictures" :key="index">
-        <img :src="picture.img" alt="" />
+        <img :src="picture.img" alt="Random Picture" />
       </div>
     </div>
   </section>

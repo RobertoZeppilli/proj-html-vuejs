@@ -154,7 +154,7 @@
 
 // play button
 @mixin play ($type: 'default') {
-    content: "\A";
+    content: "";
     @include absoluteCenter ($type: 'default');
     height: 100px;
     width: 100px;

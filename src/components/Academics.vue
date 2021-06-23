@@ -10,7 +10,7 @@
     <div class="academics">
       <div class="academic" v-for="(academic, index) in academics" :key="index">
         <div class="academic__img">
-          <img :src="academic.courseImg" alt="" />
+          <img :src="academic.courseImg" alt="Academic Image" />
         </div>
         <div class="academic__info">
           <p class="academic__price">{{ academic.price }}</p>
@@ -42,6 +42,10 @@ export default {
     text-align: center;
     width: 70%;
     margin: 0 auto 70px;
+    h2 {
+      margin-bottom: $h2Margin;
+      font-size: $h2Size;
+    }
     p {
       @include paragraphSize ($type: 'default');
     }

@@ -1,7 +1,7 @@
 <template>
   <section id="news">
     <div class="news__title">
-      <h2>Latest From Our Blog</h2>
+      <h2>Latest From Our Blogs</h2>
       <p>
         Whether you're considering a foundation course or an undergraduate
         degree master's or a PhD, academics is a place where students thrive.
@@ -47,11 +47,17 @@ export default {
 @import '../scss/mixins';
 
 #news {
-  padding-top: 150px;
+  margin-top: 150px;
+  padding-top: 100px;
   .news__title {
     text-align: center;
     width: 70%;
     margin: 0 auto 40px;
+
+    h2 {
+      margin-bottom: $h2Margin;
+      font-size: $h2Size;
+    }
 
     p {
       @include paragraphSize ($type: 'default');
