@@ -92,10 +92,12 @@ export default {
   }
   .events {
     position: relative;
+    height: 500px;
     @include flex($type: "justify between");
     margin-top: 50px;
     .event__one,
     .event__two {
+      height: 100%;
       width: 50%;
       box-shadow: $mainBoxesShadow;
     }
@@ -119,7 +121,7 @@ export default {
       position: absolute;
       top: 15%;
       left: 35%;
-      padding: 0 50px 60px 50px;
+      padding: 0 30px 20px 30px;
       background-color: $white;
       .flag {
         @include flex($type: "center");
@@ -145,7 +147,7 @@ export default {
         }
       }
       .event__cta {
-        margin-top: 80px;
+        padding-top: 50px;
         text-align: center;
         a {
           font-weight: bold;

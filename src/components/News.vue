@@ -47,7 +47,7 @@ export default {
 @import '../scss/mixins';
 
 #news {
-  margin-top: 150px;
+  margin-top: 100px;
   padding-top: 100px;
   .news__title {
     text-align: center;
