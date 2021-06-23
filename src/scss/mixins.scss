@@ -40,16 +40,11 @@
     border: none;
 }
 
-// background-image: url(../assets/img/quote.png);
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-position: center;
-
 // background settings
 @mixin setBackground ($type: 'jumbotron') {
     background: url(../assets/img/02_Landing-Page.jpg) left bottom/cover no-repeat;
     @if $type == 'contain' {
-        background: center center/contain no-repeat;
+        background: left center/contain no-repeat;
     } @else if $type == 'testimonial' {
         background: url(../assets/img/quote.png) center center/contain no-repeat;
     }
