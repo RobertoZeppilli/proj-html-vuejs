@@ -1,0 +1,169 @@
+@import './variables';
+
+// flex options
+@mixin flex ($type: 'default') {
+    display: flex;
+    @if $type == 'center' {
+        justify-content: center;
+        align-items: center;
+    } @else if $type == 'between' {
+        justify-content: space-between;
+        align-items: center;
+    } @else if $type == 'align center' {
+        align-items: center;
+    } @else if $type == 'justify between' {
+        justify-content: space-between;
+    } @else if $type == 'column between' {
+        justify-content: space-between;
+        flex-direction: column;
+    } @else if $type == 'column' {
+        flex-direction: column;
+    } @else if $type == 'column between align-center' {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// position absolute centered
+@mixin absoluteCenter ($type: 'default') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// reset input
+@mixin inputReset ($type: 'default') {
+    border-radius: 0;
+    outline: none;
+    border: none;
+}
+
+// background-image: url(../assets/img/quote.png);
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: center;
+
+// background settings
+@mixin setBackground ($type: 'jumbotron') {
+    background: url(../assets/img/02_Landing-Page.jpg) left bottom/cover no-repeat;
+    @if $type == 'contain' {
+        background: center center/contain no-repeat;
+    } @else if $type == 'testimonial' {
+        background: url(../assets/img/quote.png) center center/contain no-repeat;
+    }
+}
+
+// jumbotron button style 
+@mixin jumbotronButton ($type: 'default') {
+    display: inline-block;
+    text-decoration: none;
+    color: $jumbotronButtonColor;
+    text-transform: capitalize;
+    border: 1px solid $jumbotronButtonColor;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+// courses price highlight
+@mixin pinkHighlight ($type: 'default') {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 3px;
+    background-color: $highlight;
+    height: 8px;
+    width: 11%;
+}
+
+// services operators sizes
+@mixin operatorSize ($type: 'default') {
+    font-size: 3rem;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+// red line 
+@mixin redLine ($type: 'default') {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    height: 2px;
+    width: 20%;
+    background-color: $red;
+    @if $type == 'testimonial' {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 1px;
+        background-color: $red;
+        width: 100%;
+    }
+}
+
+
+// image positions
+@mixin imagePosition ($type: 'cover top') {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    @if $type == 'cover' {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// jumbotron h1 text style
+@mixin jumbotronTextStyle ($type: 'default') {
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 40px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+// footer top underline
+@mixin underline ($type: 'default') {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $lightBackground;
+}
+
+// footer square 
+@mixin square ($type: 'default') {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: $lightBackground;
+}
+
+// paragraph size
+@mixin paragraphSize ($type: 'default') {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+// play button
+@mixin play ($type: 'default') {
+    content: "\A";
+    @include absoluteCenter ($type: 'default');
+    height: 100px;
+    width: 100px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: $white;
+}

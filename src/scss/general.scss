@@ -1,4 +1,8 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~@fontsource/josefin-sans/400.css';
+
+@import './mixins';
+@import './variables';
 
 
 * {
@@ -11,3 +15,8 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+

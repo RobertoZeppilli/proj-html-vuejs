@@ -31,34 +31,37 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../scss/variables";
+@import "../scss/mixins";
+
 .footer__bottom {
   height: 50px;
-  background-color: #15222e;
+  background-color: $footerBottomBg;
   .container {
     height: 100%;
-  }
-  .footer__bottom__container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #8fa1b5;
-  }
-  .footer__bottom__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    li {
-      margin-left: 10px;
-      a {
-        text-decoration: none;
-        color: #8fa1b5;
-        font-size: .8rem;
+    .footer__bottom__container {
+      height: 100%;
+      @include flex($type: "between");
+      color: $grey;
+      .footer__bottom__nav {
+        @include flex($type: "between");
+        li {
+          margin-left: 10px;
+          a {
+            text-decoration: none;
+            color: $grey;
+            font-size: 0.8rem;
+            transition: color 0.5s ease-in-out;
+            &:hover {
+              color: $red;
+            }
+          }
+          i {
+            display: none;
+          }
+        }
       }
     }
-  }
-  i {
-      display: none;
   }
 }
 </style>

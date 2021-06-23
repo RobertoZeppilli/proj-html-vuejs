@@ -1,7 +1,13 @@
 <template>
   <ul>
     <li>
-      <a :href="singleLink.url"><i v-if="singleLink.icon || singleLink.footerBottom == false" :class="`${singleLink.family} ${singleLink.type}`"></i> {{ singleLink.name }}</a>
+      <a :href="singleLink.url"
+        ><i
+          v-if="singleLink.icon || singleLink.footerBottom == false"
+          :class="`${singleLink.family} ${singleLink.type}`"
+        ></i>
+        {{ singleLink.name }}</a
+      >
     </li>
   </ul>
 </template>
@@ -16,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-    ul {
-        list-style: none;
-    }
+ul {
+  list-style: none;
+}
 </style>

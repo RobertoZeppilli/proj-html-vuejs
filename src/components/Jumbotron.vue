@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron">
+  <div id="home" class="jumbotron">
     <div class="jumbotron__text">
       <h1>professional development for coaches and leaders</h1>
       <span>learn more</span>
@@ -14,38 +14,26 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../scss/mixins";
+
 .jumbotron {
   position: relative;
-  background-image: url(../assets/img/02_Landing-Page.jpg);
-  background-repeat: no-repeat;
   height: 1000px;
-  // background-color: #ebebeb;
-  background-size: cover;
-  background-position: left bottom;
+  @include setBackground($type: "jumbotron");
 
   .jumbotron__text {
     width: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absoluteCenter($type: "default");
     text-align: center;
     h1 {
-      text-align: center;
-      font-size: 4rem;
-      text-transform: capitalize;
-      font-weight: 400;
-      margin-bottom: 40px;
-      font-family: "Times New Roman", Times, serif;
+      @include jumbotronTextStyle($type: "default");
     }
     span {
-      display: inline-block;
-      text-decoration: none;
-      color: #191919;
-      text-transform: capitalize;
-      border: 1px solid #191919;
-      padding: 15px 40px;
-      cursor: pointer;
+      @include jumbotronButton($type: "default");
+      &:hover {
+        color: $red;
+        border-color: $red;
+      }
     }
   }
 }

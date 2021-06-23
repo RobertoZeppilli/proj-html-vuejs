@@ -1,22 +1,47 @@
 <template>
   <section id="courses">
-    <div class="courses__title">
-      <h2>Recent Courses</h2>
-      <p>
-        Whether you're considering a foundation course or an undergraduate
-        degree master's or a PhD, academics is a place where students thrive.
+    <div class="testimonial">
+      <p class="testimonial__text">
+        "Academics was committed to my success from the moment I attended an
+        Open House. With the support of caring
+        <span class="red">advisors, professors, and staff </span>I was able to
+        thrive in courses, gain recognition through scolarships, and finish
+        <span class="bold"
+          >with confidence in my
+          <span class="red">@academics</span> abilities.</span
+        >"
       </p>
     </div>
-    <div class="courses">
-      <div class="course" v-for="(course, index) in courses" :key="index">
-        <div class="course__img">
-          <img :src="course.courseImg" alt="" />
+    <div class="events">
+      <div class="event__one">
+        <img
+          class="video"
+          src="../assets/img/video-bg-3.jpg"
+          alt="Video Frame"
+        />
+        <img class="play" src="../assets/img/play-button.png" alt="" />
+      </div>
+      <div class="event__two">
+        <div class="flag">
+          <h3>Upcoming Events</h3>
         </div>
-        <div class="course__info">
-          <p class="price">{{ course.price }}</p>
-          <h3>{{ course.course }}</h3>
-          <p class="description">{{ course.description }}</p>
-          <p class="distributor">Course by: {{ course.distributor }}</p>
+        <div class="event__info">
+          <p>
+            Princeton offers admission information sessions and student-led
+            tours to campus visitors
+          </p>
+          <Link linktext="Learn More" />
+        </div>
+        <div class="event__info">
+          <p>
+            Admission information sessions and student-led tours to campus
+            visitors
+          </p>
+          <Link linktext="Learn More" />
+        </div>
+        <div class="event__cta">
+          <i class="far fa-map"></i>
+          <Link linktext="Event Locations" />
         </div>
       </div>
     </div>
@@ -24,70 +49,109 @@
 </template>
 
 <script>
-
+import Link from "./Link";
 export default {
   name: "Courses",
   props: {
-    courses: Array,
-  }
+    events: Array,
+  },
+  components: {
+    Link,
+  },
 };
 </script>
 
-<style lang="scss">
-#courses {
-  margin-top: 100px;
-  .courses__title {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto 70px;
+<style lang="scss" scoped>
+@import "../scss/variables";
+@import "../scss/mixins";
 
-    p {
-      font-size: 1.3rem;
-    }
-  }
-  .courses {
-    display: flex;
-    justify-content: space-between;
-    .course {
-      width: calc(100% / 3 - 1rem);
-      box-shadow: 2px 2px 2px 2px #ebebeb;
-      .course__img {
-        height: 250px;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: top;
+#courses {
+  padding-top: 100px;
+  .testimonial {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include setBackground($type: "testimonial");
+    .testimonial__text {
+      font-size: 1.9rem;
+      text-align: center;
+      line-height: 50px;
+
+      .red {
+        color: $red;
+        font-weight: bold;
+        position: relative;
+        &::before {
+          @include redLine($type: "testimonial");
         }
       }
-      .course__info {
-        padding: 30px 20px;
+      .bold {
+        font-weight: bold;
+      }
+    }
+  }
+  .events {
+    position: relative;
+    @include flex($type: "justify between");
+    margin-top: 50px;
+    .event__one,
+    .event__two {
+      width: calc(100% / 2);
+      box-shadow: $mainBoxesShadow;
+    }
+    .event__one {
+      position: relative;
+      .video {
+        height: 100%;
+        object-fit: cover;
+      }
+      &::after {
+        @include play($type: "default");
+      }
+      .play {
+        @include absoluteCenter($type: "default");
+        height: 40px;
+        z-index: 20;
+      }
+    }
+    .event__two {
+      position: absolute;
+      top: 15%;
+      left: 35%;
+      width: 55%;
+      padding: 0 50px 60px 50px;
+      background-color: $white;
+      .flag {
+        @include flex($type: "center");
+        height: 100px;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: $red;
+        color: $white;
         h3 {
-          font-size: 1.5rem;
-          margin: 15px 0 20px 0;
+          font-size: 1.4rem;
         }
-        .price {
-          position: relative;
+      }
+      .event__info {
+        padding: 0 30px;
+        p {
+          margin: 40px 0 20px 0;
           font-weight: bold;
-          z-index: 1;
-
-          &::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-            background-color: rgba(255, 192, 203, 0.5);
-            height: 10px;
-            width: 11%;
-          }
+          @include paragraphSize($type: "default");
         }
-        .description {
-          margin-bottom: 40px;
-          font-size: 1.3rem;
-          line-height: 30px;
+        a {
+          font-weight: bold;
         }
-        .distributor {
-          color: #d74d52;
+      }
+      .event__cta {
+        margin-top: 80px;
+        text-align: center;
+        a {
+          font-weight: bold;
+        }
+        i {
+          margin-right: 5px;
         }
       }
     }

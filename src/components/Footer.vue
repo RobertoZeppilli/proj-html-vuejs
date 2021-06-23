@@ -30,20 +30,30 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/variables';
+@import '../scss/mixins';
+
 footer {
-  background-color: #192735;
+  background-color: $darkBackground;
+  position: relative;
+  &::after {
+    @include square ($type: 'default');
+  }
+
   .footer__top {
     padding: 70px 0;
     .footer__nav {
-      display: flex;
-      justify-content: space-between;
-      color: #fff;
+      @include flex($type: 'justify between');
+      color: $white;
 
       li {
-        // margin-top: 20px;
         a {
-          color: #8fa1b5;
+          color: $grey;
           text-decoration: none;
+          transition: color .5s ease-in-out;
+          &:hover {
+            color: $red;
+          }
         }
       }
     }

@@ -15,8 +15,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/variables';
     .contact {
-        color: #8fa1b5;
+        color: $grey;
         margin: 10px 0;
 
         i {

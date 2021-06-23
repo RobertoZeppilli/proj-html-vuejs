@@ -1,34 +1,34 @@
 <template>
   <main>
     <div class="container">
-      <Services :services="Services" />
-      <Courses :courses="Courses" />
-      <Events />
-      <Blogs :blogs="Blogs"/>
+      <About :abouts="Abouts" />
+      <Academics :academics="Academics" />
+      <Courses />
+      <News :blogs="News"/>
     </div>
     <Pictures :pictures="Pictures"/>
   </main>
 </template>
 
 <script>
-import Services from "./Services";
+import About from "./About";
+import Academics from "./Academics";
 import Courses from "./Courses";
-import Events from "./Events";
-import Blogs from "./Blogs";
+import News from "./News";
 import Pictures from "./Pictures";
 
 export default {
   name: "Main",
   components: {
-    Services,
+    About,
+    Academics,
     Courses,
-    Events,
-    Blogs,
+    News,
     Pictures
   },
   data() {
     return {
-      Services: [
+      Abouts: [
         {
           img: require("../assets/svg/svg-0.svg"),
           service: "Online Coaching",
@@ -60,7 +60,7 @@ export default {
           bgGreen: require("../assets/img/counter-shape-3-1-1.png"),
         },
       ],
-      Courses: [
+      Academics: [
         {
           courseImg: require("../assets/img/bruce-mars-FWVMhUa_wbY-unsplash.jpg"),
           price: "Free",
@@ -86,7 +86,7 @@ export default {
           distributor: "University",
         },
       ],
-      Blogs: [
+      News: [
         {
           img: require("../assets/img/news-3-2.jpg"),
           text: "Peer pressure changes how teens tackle inequality",

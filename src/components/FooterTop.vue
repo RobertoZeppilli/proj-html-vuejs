@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container square">
     <div class="footer__top">
       <Register />
       <nav class="footer__nav">
@@ -62,14 +62,20 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../scss/variables";
+
 .footer__nav {
   padding-right: 100px;
+  .footer__nav__title {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
   li {
     margin-top: 20px;
+
+    a {
+      font-size: 0.9rem;
+    }
   }
-}
-.footer__nav__title {
-  margin-bottom: 20px;
-  font-size: 1.4rem;
 }
 </style>
